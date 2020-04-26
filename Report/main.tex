@@ -2,11 +2,11 @@
 
 \usepackage[a4paper,width=150mm,top=25mm,bottom=25mm]{geometry}
 \usepackage[utf8]{inputenc}
-\usepackage{natbib}
 \usepackage{graphicx}
+\usepackage{listings}
 
 \title{
-    {\includegraphics{images.jpg}}\\
+    {\includegraphics{./images/logo_pk.jpg}}\\
     {Artificial Intelligence}\\
     {\large Emotion recognition with Convolutional neural networks}\\
      \small Leaded by M.Eng Kazimierz Kiełkowicz
@@ -23,34 +23,18 @@
     \newpage
     
     \section{Overview}
-    This project will show the process of building a Convolutional  neural network to recognize emotions on humans faces.
-    This type of application can be use full and be applied  in various system such as security cameras. \\ 
-    As we know nonverbal signals sometimes say more then words.
+    \input{chapters/overview}
     
     \section{Introduction}
     
     \section{Convolutional Neural Networks}
     
     \section{Dataset description}
-    Data that we got is in one *.csv file with two columns: \\
-    \begin{itemize}
-      \item number of emotion \\
-        in rrage 0 - 6:
-        \begin{itemize}
-            \item 0 - angry
-            \item 1 - disgust
-            \item 2 - fear
-            \item 3 - happy
-            \item 4 - sad
-            \item 5 - surprise
-            \item 6 - neutral
-        \end{itemize}
-      \item string of pixels \\
-        Pixels are in one long string (2304 of them), they are in gray scale 0 - 255.
-        We need to preproces them into array of 48x48x1 that will could be reorganised as an picture with 
-    \end{itemize}
+    \input{chapters/datasetDescription}
     
     \section{Model builling}
+    \input{chapters/modelBuilding}
+
     
     \section{Implementation}
     
