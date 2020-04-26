@@ -1,0 +1,19 @@
+    Data that we got is in one *.csv file with two columns:
+    \begin{itemize}
+      \item number of emotion \\
+        in rage 0 - 6:
+        \begin{itemize}
+            \item 0 - angry
+            \item 1 - disgust
+            \item 2 - fear
+            \item 3 - happy
+            \item 4 - sad
+            \item 5 - surprise
+            \item 6 - neutral
+        \end{itemize}
+      \item string of pixels \\
+        Pixels are in one long string (2304 of them), they are in gray scale 0 - 255.\\
+        We need to preprocess them into array of 48x48x1 that will could be reorganised as an picture also we will change to rage to 0 - 1 scale - by dividing via 255
+        \lstinputlisting[language=Python]{../Model/DataProcess.py}
+
+    \end{itemize}
