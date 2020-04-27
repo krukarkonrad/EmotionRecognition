@@ -1,2 +1,9 @@
-/out/
+/.idea/
 /data/
+/Report/main.aux
+/Report/main.log
+/Report/main.pytxcode
+/Report/main.synctex.gz
+/Report/main.toc
+/Report/references.bib
+/out/

@@ -2,7 +2,7 @@
 width, height, depth = 48, 48, 3
 numOfClasses = 7
 epochs = 50
-batch_size = 50
+batch_size = 30
 
 #Loading Data
 from Model.DataProcess import loadData
