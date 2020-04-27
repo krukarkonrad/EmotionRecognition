@@ -24,4 +24,3 @@ def loadData():
     images = resizeImages(images)
     print("Data loading DONE")
     return images, emotions
-
