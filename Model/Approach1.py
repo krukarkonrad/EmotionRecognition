@@ -79,7 +79,7 @@ callbacks = [checkpoint]
 #Fiting
 history = finalModel.fit_generator(
     datagen.flow(xtrain, ytrain, batch_size=batch_size),
-    steps_per_epoch=xtrain[0]/32,
+    steps_per_epoch=xtrain.shape[0]/32,
     epochs=2,
     validation_data=(xtest, ytest),
     callbacks = callbacks

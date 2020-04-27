@@ -21,6 +21,7 @@ def loadData():
     images = np.expand_dims(images, -1)
     images = np.repeat(images, 3, axis=3)
     emotions = pd.get_dummies(rawData['emotion'])
+    print(emotions)
     images = resizeImages(images)
     print("Data loading DONE")
     return images, emotions
