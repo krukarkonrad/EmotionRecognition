@@ -13,7 +13,12 @@ Data that we got is in one *.csv file with two columns:
     \end{itemize}
   \item string of pixels \\
     Pixels are in one long string (2304 of them), they are in gray scale 0 - 255.\\
-    We need to preprocess them into array of 48x48x1 that will could be reorganised as an picture also we will change to rage to 0 - 1 scale - by dividing via 255
-    \lstinputlisting[language=Python]{../Model/DataProcess.py}
+    We need to preprocess them into array of 48x48x1 that will could be reorganised as
+    a picture also we will change to rage to 0 - 1 scale - by dividing via 255
+    \lstinputlisting[language=Python, firstline=17, lastline=39]{../Model/Approach1.py}
+    After that we need to multiplay the layers into (48, 48, 3) becouse VGG16 CNN is prepared for RGB pictures.
+    So basically recopy gray pixels 2 times more.
+    \lstinputlisting[language=Python, firstline=42, lastline=45]{../Model/Approach1.py}
+
 
 \end{itemize}

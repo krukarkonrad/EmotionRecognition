@@ -1,8 +1,3 @@
-#CONST
-imageSize, depth = 48, 3
-numberOfClasses = 7
-filePath = 'data.csv'
-
 import numpy as np
 import pandas as pd
 from keras.applications.vgg16 import VGG16
@@ -19,7 +14,12 @@ def split_for_test(list):
     test = list[TEST_START:]
     return train, test
 
-def processPixels(pixels, img_size=imageSize):
+#CONST
+imageSize, depth = 48, 3
+numberOfClasses = 7
+filePath = 'data.csv'
+
+def processPixels(pixels):
 
     pixels_list = [item[0] for item in pixels.values.tolist()]
 
