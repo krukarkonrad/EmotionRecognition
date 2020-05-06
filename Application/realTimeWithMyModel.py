@@ -40,7 +40,7 @@ while True:
         # convert to 1x48x48x1
         roi = np.expand_dims(roi, axis=3)
         # convert to 1x48x48x3
-        roi = np.repeat(roi, 3, axis=3)
+        #roi = np.repeat(roi, 3, axis=3)
         roi = roi.astype("float") / 255.0
         #roi = img_to_array(roi)
         #roi = np.expand_dims(roi, axis=0)
