@@ -1,0 +1,19 @@
+We have trained our model for 300 epochs with a batch size of 50.
+Accuracy:
+\begin{itemize}
+      \item Training Set:
+        \begin{itemize}
+            \item First epochs: 32,8\%
+            \item Last epoch: 98,7\%
+        \end{itemize}
+      \item Test Set:
+        \begin{itemize}
+            \item Last epoch: 98,7\%
+            \item Last epoch: 47,6\%
+        \end{itemize}
+\end{itemize}
+\includegraphics[scale=0.5]{images/modelOne/accOne.png}
+As we can, accuracy on the train set is steadily increasing, but on the test set it increases only in the first thirty-forty epochs. Difference in accuracy is probably caused by over-fitting. In real life accuracy will probably be even lower, due to problems like different face position, or bad light. We can do some preprocessing on new images to more closely match the images fed in during training/testing - this should increase accuracy.\\
+\includegraphics[scale=0.5]{images/modelOne/lossOne.png}
+Validation loss is much higher than training loss, which proves our theory about over-fitting
+\includegraphics[scale=0.60]{images/modelOne/matrixOne.png}

@@ -1,0 +1,6 @@
+We need to preprocess images into a 48x48 array, so that it could be reorganised as a picture, also we will change the range from 0 -255 to 0 - 1.
+\lstinputlisting[language=Python, firstline=22, lastline=38]{../Model/one/VGG16.py}
+After that we need to multiply the layers into (48, 48, 3) because VGG16 CNN is prepared for RGB pictures. So basically recopy gray pixels 2 times more.
+\lstinputlisting[language=Python, firstline=41, lastline=44]{../Model/one/VGG16.py}
+We have also split this dataset into the training part and testing part.
+\lstinputlisting[language=Python, firstline=17, lastline=20]{../Model/one/VGG16.py}

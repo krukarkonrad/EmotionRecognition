@@ -6,7 +6,7 @@ import numpy as np
 
 # parameters for loading data and images
 detection_model_path = 'haarcascade_frontalface_default.xml'
-emotion_model_path = 'model.h5'
+emotion_model_path = 'onwmodel.h5'
 
 # hyper-parameters for bounding boxes shape
 # loading models
@@ -51,7 +51,7 @@ while True:
 
     for (i, (emotion, prob)) in enumerate(zip(EMOTIONS, preds)):
         # construct the label text
-        text = "{}: {:.2f}%".format(emotion, prob * 100)
+        text = "{}: {:.10f}%".format(emotion, prob * 100)
         w = int(prob * 300)
         cv2.rectangle(canvas, (7, (i * 35) + 5),
                       (w, (i * 35) + 35), (0, 0, 255), -1)

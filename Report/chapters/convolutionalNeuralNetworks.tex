@@ -1,0 +1,28 @@
+A convolutional neural network (CNN) is a class of deep neural networks, most commonly applied to analyzing visual imagery. Convolutional networks were inspired by biological processes - pattern between neurons resembles the organization of the animal visual cortex. A convolutional neural network consists of an input and an output layer, as well as multiple hidden layers. The hidden layers of a CNN typically consist of a series of convolutional layers, subsequently followed by additional convolutions such as pooling layers, fully connected layers and normalization layers.\\
+
+"Convolutional Layer"\\
+
+The convolutional layer is the core building block of a CNN. The layer's parameters consist of a set of learnable kernels, which have a small receptive field, defined by a width and height. Kernel extends through the full depth of the input volume. During the forward pass, each filter is computing the dot product between the entries of the filter and the input and producing a 2-dimensional activation map of that filter. Stacking the activation maps for all filters along the depth dimension forms the full output volume of the convolution layer. Such a two-dimensional output array from this operation is called a “feature map“. Once a feature map is created, we can pass each value in the feature map through a nonlinearity, such as a ReLU, much like we do for the outputs of a fully connected layer.\\
+
+In summary, we have a input, such as an image of pixel values, and we have a kernel, which is a set of weights, and the kernel is systematically applied to the input data to create a feature map.\\
+
+"ReLU" \\
+
+ReLU is the abbreviation of rectified linear unit, which applies the non-saturating activation function\\
+
+It effectively removes negative values from an activation map by setting them to zero. It increases the nonlinear properties of the decision function and of the overall network without affecting the receptive fields of the convolution layer.\\
+
+Other functions could be also used to increase nonlinearity, but ReLU is often preferred to other functions because it trains the neural network several times faster without a significant penalty to generalization accuracy\\
+
+"Pooling layer"\\
+
+Another important concept of CNNs is pooling, which is a form of non-linear down-sampling. There are several non-linear functions to implement pooling among which max pooling is the most common. It partitions the input image into a set of non-overlapping rectangles and, for each such sub-region, outputs the maximum. The most common form is a pooling layer with filters of size 2x2 applied with a stride of 2 downsamples every depth slice in the input by 2 along both width and height, discarding 75 %
+of the activations. Every MAX operation would in this case be taking a max over 4 numbers (little 2x2 region in some depth slice). \\
+
+In addition to max pooling, the pooling units can also perform other functions, such as average pooling or even L2-norm pooling. Average pooling was often used historically but has recently fallen out of favor compared to the max pooling operation, which has been shown to work better in practice.\\
+
+"Fully connected layer"\\
+
+The output from the convolution layer was a 2D matrix. Ideally, we would want each row to represent a single input image. In fact, the fully connected layer can only work with 1D data. Hence, the values generated from the previous operation are first converted into a 1D format.\\
+
+Once the data is converted into a 1D array, it is sent to the fully connected layer. All of these individual values are treated as separate features that represent the image. The fully connected layer performs two operations on the incoming data – a linear transformation and a non-linear transformation.\\
