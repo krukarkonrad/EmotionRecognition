@@ -3,3 +3,9 @@ Humans can use different forms of communications such as speech, hand gestures a
 Many methods rely on extraction of the facial region. This can be realized in two ways - through manual inference or an automatic detection approach. Methods often involve the Facial Action Coding System which describes the facial expression deconstructing it into the specific action units (AU). An Action Unit is a facial action like ”raising the InnerBrow”. Multiple activation of AUs can describe the facial expression. Being able to correctly detect AUs is a helpful step, since it allows making a statement about the activation level of the corresponding emotion, but detecting handcrafted facial landmarks can be hard, as the distance between them differs depending on the person. Also, it is significantly harder to determine the facial features of a person when only part of their face is visible or if the lighting conditions are poor.\\
 
 Our approach uses Convolutional Neural Networks, which is a special kind of ANN and have been shown to work well as feature extractor when using images as input and are real-time capable. This allows for the usage of the raw input images without any pre- or post- processing.\\
+
+Whole project is inspired by
+"Accelerating Very Deep ConvolutionalNetworks for Classification and Detection"
+~\cite{vdcnflsir}
+and
+"DeXpression: Deep Convolutional Neural" articules ~\cite{dcnnfer}.
