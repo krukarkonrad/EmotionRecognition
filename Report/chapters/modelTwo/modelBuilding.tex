@@ -1,3 +1,4 @@
-model building
+\includegraphics[scale=1]{images/modelTwo/modelImg.png}
+Similar to the vgg16 model, we decided that our model will only use very small (3x3) filters in convolutional layers. The input will consist of array with a size of 48 by 48. We started with two layers followed by max Pooling layer with filter size 2x2 and by Dropout layer. Next step is four more convolutional layers, followed by the same two layers are previous step. Then, we flatten output and pass it to two more layers.
 
-
+It gives us slightly more than 22 million of trainable parameters, our previous model have ~15 millions of parameters, most of them pre-trained.
