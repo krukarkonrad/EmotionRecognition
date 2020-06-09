@@ -7,6 +7,7 @@
 \usepackage{amssymb}
 \usepackage{hyperref}
 \usepackage{amsmath}
+\usepackage{indentfirst}
 
 \title{
     {\includegraphics{./images/logo_pk.jpg}}\\
@@ -41,7 +42,7 @@
     
     \newpage
     \section{Approach 1: Transfer learning with VGG16}
-    At the beginning we decided to use transfer learning: pretrained VGG16 model with our additional final layers.
+    First approach is to use transfer learning: pretrained VGG16 model with our additional final layers.
  
     	\subsection{VGG16 Description}
     	\input{chapters/modelOne/vgg16Description}
@@ -63,10 +64,8 @@
     	\input{chapters/modelOne/results}
     	
     \newpage
-    \section{Approach 2: Our own CNN model}
-    Seeing the results of the previous model, we decided to create our own CNN.
-
-    	    	
+    \section{Approach 2: New CNN model}
+        	    	
     	\subsection{Model building}
     	\input{chapters/modelTwo/modelBuilding}
     

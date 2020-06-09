@@ -16,7 +16,7 @@ ReLU is the abbreviation of rectified linear unit, which applies the non-saturat
     \end{large} \\
 \end{center}
 It effectively removes negative values from an activation map by setting them to zero. It increases the nonlinear properties of the decision function and of the overall network without affecting the receptive fields of the convolution layer.\\
-Other functions could be also used to increase nonlinearity, but ReLU is often preferred to other functions because it trains the neural network several times faster without a significant penalty to generalization accuracy
+Other functions could be also used to increase nonlinearity, but ReLU is often preferred to other functions because it trains the neural network several times faster without a significant penalty to generalization accuracy.
 
 \subsection{Pooling layer}
 Another important concept of CNNs is pooling, which is a form of non-linear down-sampling. There are several non-linear functions to implement pooling among which max pooling is the most common. It partitions the input image into a set of non-overlapping rectangles and, for each such sub-region, outputs the maximum. The most common form is a pooling layer with filters of size 2x2 applied with a stride of 2 downsamples every depth slice in the input by 2 along both width and height, discarding 75 %

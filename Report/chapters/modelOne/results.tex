@@ -1,5 +1,4 @@
-We have trained our model for 300 epochs with a batch size of 50.
-Accuracy:
+When trained, the model for 300 epochs with a batch size of 50, it showed an accuaracy of:
 \begin{itemize}
       \item Training Set:
         \begin{itemize}
@@ -16,7 +15,7 @@ Accuracy:
 Test/Validation Set above suggest that mode is over-fitting.\\
 \\
 \includegraphics[scale=0.5]{images/modelOne/accOne.png}
-As we can, accuracy on the train set is steadily increasing, but on the test set it increases only in the first thirty-forty epochs. Difference in accuracy is probably caused by over-fitting. In real life accuracy will probably be even lower, due to problems like different face position, or bad light. We can do some preprocessing on new images to more closely match the images fed in during training/testing - this should increase accuracy.\\
+Accuracy on the train set is steadily increasing, but on the test set it increases only in the first thirty-forty epochs. Difference in accuracy is likely caused by over-fitting. In real life accuracy will probably be even lower, due to problems like different face position, or bad light.  By doing some preprocessing on new images to more closely match the images fed in during training/testing - this should increase accuracy.\\
 \\
 \includegraphics[scale=0.5]{images/modelOne/lossOne.png}
 Validation loss is much higher than training loss, which proves our theory about over-fitting\\
@@ -24,7 +23,7 @@ Validation loss is much higher than training loss, which proves our theory about
 \includegraphics[scale=0.60]{images/modelOne/matrixOne.png}\\
 Confusion matrix shows us mistakes that model made.\\
 \\
-Here we have some examples:
+Here are some examples:
 \begin{itemize}
     \item Correctly predicted images\\
             \includegraphics[scale=0.50]{images/modelOne/trueOne.png}
